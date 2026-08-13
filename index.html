@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tablero de apuestas deportivas simulado para el taller de Git y terminal.">
+<title>Apuestas Taller · Sebastian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar tipo árbol de archivos -->
+  <aside class="sidebar">
+    <div class="sidebar__kicker">Ing. de Software</div>
+    <div class="sidebar__title">apuestas-taller/</div>
+    <p class="sidebar__sub">tablero + git, desde cero</p>
+
+    <nav class="tree">
+      <a href="#intro" class="tree__item"><span class="tree__icon">◆</span>intro.md</a>
+      <a href="#board" class="tree__item"><span class="tree__icon">📁</span>01-tablero</a>
+      <a href="#como-funciona" class="tree__item"><span class="tree__icon">📁</span>02-como-funciona</a>
+      <a href="#proyecto" class="tree__item"><span class="tree__icon">📁</span>03-sobre-el-proyecto</a>
+    </nav>
+
+    <div class="sidebar__footer">
+      <span>Windows / PowerShell</span>
+      <span>Visual Studio Code</span>
+      <span>GitHub</span>
+    </div>
+  </aside>
+
+  <!-- Ticker superior -->
+  <div class="ticker">
+    <div class="ticker__track" id="tickerTrack"></div>
+  </div>
+
+  <main class="content">
+
+    <section id="intro" class="intro">
+      <p class="prompt">$ whoami</p>
+      <h1># Tablero de apuestas del taller</h1>
+      <p class="intro__sub">Este es el proyecto de apoyo del taller de terminal y Git. Los datos son ficticios — ninguna cuota aquí mueve dinero real. Todo lo que ves se construyó en vivo con VS Code, PowerShell y Git.</p>
+      <div class="slip-indicator" id="slipIndicator">
+        <span id="slipCount">0</span> selecciones marcadas
+      </div>
+    </section>
+
+    <section id="board" class="section">
+      <p class="section__eyebrow">01 · Partidos en juego</p>
+      <h2 class="section__title">El tablero de esta noche</h2>
+      <p class="section__desc">Cada fila es un partido. Cada botón, una cuota. Haz clic para marcarla — se suma al contador de selecciones arriba.</p>
+
+      <div class="board__header">
+        <span id="matchCount">0 partidos</span>
+      </div>
+      <div class="board__list" id="boardList">
+        <!-- filas generadas por script.js -->
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+      <p class="section__eyebrow">02 · Cómo se lee el tablero</p>
+      <h2 class="section__title">Tres columnas, una lógica</h2>
+
+      <div class="code-block">
+        <div class="code-block__bar">
+          <span>lectura-de-cuotas.md</span>
+          <button class="copy-btn" data-copy="1 = Local · X = Empate · 2 = Visitante">copiar</button>
+        </div>
+        <pre><code># 1 · Local
+Gana el equipo de casa.
+
+# X · Empate
+El partido termina igualado.
+
+# 2 · Visitante
+Gana el equipo que juega fuera.
+
+Entre más alta la cuota, menos probable
+considera el mercado ese resultado.</code></pre>
+      </div>
+
+      <p class="section__desc">La franja superior (el ticker) simula el movimiento de cuotas en vivo, como el marcador de un estadio.</p>
+    </section>
+
+    <section id="proyecto" class="section">
+      <p class="section__eyebrow">03 · Sobre este proyecto</p>
+      <h2 class="section__title">Hecho paso a paso con Git</h2>
+
+      <div class="code-block">
+        <div class="code-block__bar">
+          <span>flujo.md</span>
+          <button class="copy-btn" data-copy="git add . && git commit -m &quot;mensaje&quot; && git push">copiar</button>
+        </div>
+        <pre><code>git add .
+git commit -m "mensaje del cambio"
+git push</code></pre>
+      </div>
+
+      <p class="section__desc">Sin importar qué tan grande crezca este proyecto, el ciclo diario siempre es el mismo: editar → <b>add</b> → <b>commit</b> → <b>push</b>.</p>
+    </section>
+
+    <footer class="site-footer">
+      <p>Hecho por Sebastian · Universidad de Ibagué</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
