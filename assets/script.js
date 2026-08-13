@@ -3,7 +3,8 @@ const partidos = [
   { hora: "20:00", liga: "Liga Local", local: "Tigres FC", visitante: "Halcones", cuotas: [2.10, 3.25, 3.40] },
   { hora: "20:30", liga: "Copa Regional", local: "Cóndores", visitante: "Lobos Norte", cuotas: [1.85, 3.60, 4.20] },
   { hora: "21:00", liga: "Liga Local", local: "Estrella Azul", visitante: "Puma City", cuotas: [2.55, 3.10, 2.70] },
-  { hora: "21:45", liga: "Liga Juvenil", local: "Río Verde", visitante: "Atlético Sur", cuotas: [1.95, 3.35, 3.90] },
+  { hora: "21:45", liga: "Liga Juvenil", local: "Río Verde", visitante: "Atlético Sur", cuotas: [1.95, 3.35, 3.90]},
+  { hora: "22:15", liga: "Liga Local", local: "Águilas Doradas", visitante: "Marea Roja", cuotas: [2.30, 3.05, 2.95] },
 ];
 
 const boardList = document.getElementById("boardList");
